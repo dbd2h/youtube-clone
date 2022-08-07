@@ -1,0 +1,15 @@
+head
+    link(rel="shortcut icon",href="https://www.youtube.com/s/desktop/79e611f1/img/favicon.ico")
+    if pageTitle
+        title #{pageTitle} - Youtube
+    else
+        title Youtube
+    link(rel="stylesheet",href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+    link(rel="stylesheet",href="/assets/css/style.css")
+body
+    include ../partials/header
+
+    main
+        block content
+    script
+        block script

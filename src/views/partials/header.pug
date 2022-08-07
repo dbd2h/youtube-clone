@@ -1,0 +1,32 @@
+header 
+    div.header__start
+        div.header__menu
+            i.fas.fa-bars
+        div.header__home
+            a(href="/")
+                i.fab.fa-youtube
+                span YouTube
+    div.header__center
+        div.header__search
+            form.not-form(method="GET", action="/search")
+                div.header__input-box
+                    input(name="search",type="text",placeholder="Search")
+                button
+                    i.fas.fa-search
+    div.header__end
+        div.header__setting
+            i.fas.fa-ellipsis-v
+        if loggedIn
+            div.header__make-video
+                a(href="/video/upload")
+                    i.fas.fa-video
+            div.header__alarm
+                i.fas.fa-bell
+            div.header__profile
+                a(href=`/user/${loggedInUser._id}`)
+                    img(src="/"+loggedInUser.avatarUrl)
+        else 
+            div.header__sign-in
+                a(href="/login") 
+                    i.fas.fa-user-circle
+                    span SIGN IN

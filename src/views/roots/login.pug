@@ -1,0 +1,28 @@
+extends ../templates/base
+
+block content
+    form(method="POST")
+        if errorMessage
+            div.error-box
+                i.fas.fa-circle-xmark
+                span=errorMessage
+        div.input-box
+            input(placeholder="Username", type="text",     name="username", required)
+        div.input-box
+            input(placeholder="Password", type="password", name="password", required)
+        input(type="submit", value="Sign In")
+        br
+        hr
+        br
+        a.social-link.kakao-link(href="/user/kakaotalk/start") 
+            div.kakao-login
+                i.fas.fa-comment
+                span Continue with KakaoTalk &rarr;
+        a.social-link.github-link(href="/user/github/start") 
+            div.github-login
+                i.fab.fa-github
+                span Continue with Github &rarr;
+    div.sign-link 
+        span Don`t have an account? 
+        a(href="/join") Create One &rarr;
+    

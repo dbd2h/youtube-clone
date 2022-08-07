@@ -1,0 +1,10 @@
+extends ../templates/base
+
+block content
+    div.video-container
+    video(src=`/${video.fileUrl}`, controls)
+
+    a(href=`${video._id}/edit`) Edit Video
+
+block script
+    script(src="/assets/js/videoPlayer.js")

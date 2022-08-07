@@ -1,0 +1,151 @@
+header {
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  border-bottom: 1px solid $btnborder;
+  background-color: white;
+  opacity: 0.95;
+  .header {
+    &__start {
+      display: flex;
+      align-items: center;
+
+      .header__menu {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+
+      .header__home {
+        width: 90px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+
+        a {
+          display: flex;
+          align-items: center;
+
+          i {
+            color: $red;
+            font-size: 25px;
+          }
+
+          span {
+            margin-top: 3px;
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            font-family: Roboto;
+          }
+        }
+      }
+    }
+    &__center {
+      .header__search {
+        form {
+          display: flex;
+
+          .header__input-box {
+            height: 38px;
+            display: flex;
+            align-items: center;
+            border: solid 1px $btnborder;
+            border-right: none;
+
+            input {
+              height: 24px;
+              border: 0;
+              font-size: 16px;
+
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+
+          button {
+            border: 0;
+            outline: 0;
+            height: 38px;
+            width: 60;
+            border: solid 1px $btnborder;
+            background-color: $btn;
+
+            i.fas.fa-search {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    &__end {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .header__setting,
+      .header__make-video,
+      .header__alarm {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-right: 10px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      .header__profile {
+        margin-left: 11.25px;
+        margin-right: 11.25px;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .header__sign-in {
+        width: 108.75px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        border: solid 1px $signBtn;
+        color: $signBtn;
+        justify-content: center;
+        a {
+          display: flex;
+          align-items: center;
+          i {
+            margin-right: 7px;
+            font-size: 23px;
+          }
+          span {
+            font-size: 15px;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+    }
+  }
+}

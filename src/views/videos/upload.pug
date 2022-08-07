@@ -1,0 +1,17 @@
+extends ../templates/base
+
+block content
+    form(method="POST",enctype="multipart/form-data")
+        label(for="video") Video Upload 
+        div.input-box.input-upload
+            input(type="file", accept="video/*", name="video", id="video", required)
+        label(for="thumb") Thumbnail Upload 
+        div.input-box.input-upload
+            input(type="file", accept="image/*", name="thumb", id="thumb", required)
+        div.input-box
+            input(placeholder="Title",                       type="text", name="title")
+        div.input-box
+            input(placeholder="Description",                 type="text", name="description")
+        div.input-box
+            input(placeholder="Hashtags(divide with comma)", type="text", name="hashtags")
+        input(type="submit",value="Upload")

@@ -1,0 +1,7 @@
+extends ../templates/base
+include ../mixins/home-video
+
+block content
+    div.video-grid
+        each video in videos
+            +video(video)

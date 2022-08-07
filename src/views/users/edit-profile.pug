@@ -1,0 +1,19 @@
+extends ../templates/base
+
+block content
+    img.edit-profile__photo(src="/"+loggedInUser.avatarUrl)
+    form(method="POST",enctype="multipart/form-data")
+        if errorMessage
+            div.error-box
+                i.fas.fa-circle-xmark
+                span=errorMessage
+        label(for="avatar") Profile Photo Upload 
+        div.input-box.input-upload
+            input(type="file", accept="image/*", name="avatar", id="avatar", required)
+        div.input-box
+            input(placeholder="Email",                    type="email", name="email",    required, value=loggedInUser.email)
+        div.input-box
+            input(placeholder="Username (need to login)", type="text",  name="username", required, value=loggedInUser.username)
+        div.input-box
+            input(placeholder="Name (profile name)",      type="text",  name="name",     required, value=loggedInUser.name)
+        input(type="submit", value="Edit Profile")

@@ -1,0 +1,45 @@
+.home-video {
+  width: 22vw;
+  display: block;
+  box-sizing: content-box;
+  &__img {
+    width: 22vw;
+    height: 12.375vw;
+    object-fit: cover;
+  }
+  &__inf {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    height: 94px;
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    .home-video__text {
+      width: 100%;
+      padding: 0 24px 0 12px;
+
+      .home-video__title {
+        margin-bottom: 10px;
+      }
+      .home-video__owner,
+      .home-video__meta {
+        font-size: 13px;
+        opacity: 0.6;
+      }
+      .home-video__meta {
+        display: flex;
+        align-items: center;
+        .home-video__dot {
+          opacity: 1;
+          font-size: 20px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}

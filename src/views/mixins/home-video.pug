@@ -1,0 +1,18 @@
+mixin video(video)
+    div
+        a.home-video(href=`/video/${video.id}`)
+            img.home-video__img(src=video.thumbUrl)
+            div.home-video__inf
+                img(src=video.owner.avatarUrl)
+                div.home-video__text
+                    div.home-video__title=video.title
+                    span.home-video__owner=video.owner.name
+                    div.home-video__meta
+                        div.home-video__views
+                            span=video.meta.views  
+                            if video.meta.views===0 || video.meta.views===1
+                                span  view 
+                            else 
+                                span  views 
+                        span.home-video__dot ·
+                        div.home-video__created

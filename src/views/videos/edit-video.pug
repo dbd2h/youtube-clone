@@ -1,0 +1,8 @@
+extends ../templates/base
+
+block content
+    form(method="POST")
+        input(placeholder="Title",                       type="text", name="title",       value=video.title)
+        input(placeholder="Description",                 type="text", name="description", value=video.description)
+        input(placeholder="Hashtags(divide with comma)", type="text", name="hashtags",    value=video.hashtags.map(hash=>hash.slice(1)).join())
+        input(type="submit",value="Edit")
